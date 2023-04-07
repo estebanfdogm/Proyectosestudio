@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>Encriptador de Texto</h1>
+    <label for="texto-claro">Texto a encriptar:</label>
+    <textarea id="texto-claro"></textarea>
+    <br>
+    <label for="clave">Clave:</label>
+    <input type="password" id="clave">
+    <br>
+    <button id="encriptar-btn">Encriptar</button>
+    <button id="desencriptar-btn">Desencriptar</button>
+    <br>
+    <label for="texto-encriptado">Texto encriptado:</label>
+    <textarea id="texto-encriptado"></textarea>
+    <script src="script.js"></script>
+  </body>
+</html>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+textarea, input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+const encriptarBtn = document.getElementById("encriptar-btn");
+const desencriptarBtn = document.getElementById("desencriptar-btn");
+const textoClaro = document.getElementById("texto-claro");
+const textoEncriptado = document.getElementById("texto-encriptado");
+const clave = document.getElementById("clave");
+
+encriptarBtn.addEventListener("click", () => {
+  const texto = textoClaro.value;
+  const key = clave.value;
+  const encriptado = CryptoJS.AES.encrypt(texto, key);
+  textoEncriptado.value = encriptado.toString();
+});
+
+desencriptarBtn.addEventListener("click", () => {
+  const encriptado = textoEncriptado.value;
+  const key = clave.value;
+  const bytes = CryptoJS.AES.decrypt(

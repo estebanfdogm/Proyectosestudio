@@ -1,0 +1,10 @@
+package variables;
+
+public class variables {
+
+	public static void main(String[] args) {
+		int edad = 23;
+		System.out.println(edad);
+	}
+
+}

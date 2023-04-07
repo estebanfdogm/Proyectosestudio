@@ -1,0 +1,105 @@
+*{
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 32px;
+    line-height: 150%;
+    
+}
+nav a{
+    padding-top: 10px;
+    margin-left: 10px;
+    width: 2%;
+    max-width: 100%;
+    height: auto;
+    text-decoration: none;
+}
+.logo{
+    padding-top: 10px;
+    margin-left: 10px;
+    width: 2%;
+    max-width: 100%;
+    height: auto;
+}
+main{
+    background-image: url(alura2.jpg);
+    background-repeat: repeat;
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 80px;
+    
+}
+
+.textArea{
+    background: none;
+    border: none;
+    color:rgb(0, 0, 0);
+    margin-top: 70px;
+    text-transform: lowercase;
+    max-width: 90%;
+    height: 500px;
+    max-height: 40%;
+}
+::placeholder {color: rgb(20, 146, 219);}
+    .textArea:focus{
+        outline: none;
+    }
+
+.mensaje{
+    background: none;
+    border: none;
+    border-radius: 24px;
+    color: rgb(20, 146, 219);
+    margin-left: 50px;
+    margin-top: 50px;
+    padding-left: 50px;
+    position: absolute;
+    max-width: 90%;
+    height: 500px;
+    max-height: 75%;
+}
+.mensaje:focus{
+    outline: none;
+}
+.botones{
+    display: flex;
+    margin-top: 18px;
+}
+.botonEncriptar{
+    background-color: ghostwhite;
+    border: 1px solid blue;
+    border-radius: 24px;
+    color:rgb(20, 146, 219);
+    cursor: pointer;
+    height: auto;
+    max-width: 100%;
+}
+.botonDesencriptar{
+    background: ghostwhite;
+    border: 1px solid blue;
+    border-radius: 24px;
+    color: rgb(20, 146, 219);
+    cursor: pointer;
+    height: auto;
+    margin-left: 30px;
+    max-width: auto;
+}
+.copiar{
+    background-color: ghostwhite;
+    border: 1px solid blue;
+    border-radius: 50px;
+    color: rgb(20, 146, 219);
+    cursor: pointer;
+    height: auto;
+    margin-left: 130px;
+    margin-top: 500px;
+    position: absolute;
+    max-width: 100%;
+}
+.warning{
+    color: rgb(20, 146, 219);
+    font-size: 18px;
+    max-width: 100%;
+    height: auto;
+}
